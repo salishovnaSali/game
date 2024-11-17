@@ -1,0 +1,237 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding: 50px;
+    background: radial-gradient(circle, rgba(0, 172, 255, 0.5) 25%, rgba(255, 90, 95, 0.4) 75%);
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Header Styling */
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff6347;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  header h1:hover {
+    transform: scale(1.1);
+  }
+  
+  header p {
+    font-size: 1.4rem;
+    color: #f5f5f5;
+    font-style: italic;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+  
+  /* Game Section */
+  .game {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+  }
+  
+  .game:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game h2 {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 4px dashed #e74c3c;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .game h2:hover {
+    color: #2ecc71;
+    border-color: #2ecc71;
+  }
+  
+  .game p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .game p:hover {
+    opacity: 1;
+    color: #34495e;
+  }
+  
+  /* Game Image Styling */
+  .game-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .game-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Section Layout */
+  section {
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Interactive Hover Effects on Game Cards */
+  .game:before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 172, 255, 0.15);
+    z-index: -1;
+    border-radius: 50%;
+    animation: pulse 6s ease-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #ff6347;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    z-index: 2;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer:hover {
+    background-color: #ff4500;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 30px 20px;
+    }
+  
+    header h1 {
+      font-size: 3.5rem;
+    }
+  
+    header p {
+      font-size: 1.2rem;
+    }
+  
+    .game h2 {
+      font-size: 2.5rem;
+    }
+  
+    .game p {
+      font-size: 1rem;
+    }
+  
+    .game-image {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 20px 15px;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    .game h2 {
+      font-size: 2rem;
+    }
+  
+    .game p {
+      font-size: 0.9rem;
+    }
+  
+    .game-image {
+      max-width: 100%;
+    }
+  }
+  
